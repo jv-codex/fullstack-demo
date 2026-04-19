@@ -26,6 +26,7 @@ This project demonstrates a modern end‑to‑end architecture with JWT authenti
 ---
 
 ## Project Structure
+```
 fullstack-demo/
 │
 ├── frontend/                → Angular 21 project
@@ -48,4 +49,4 @@ fullstack-demo/
 │   └── Dockerfile
 │
 └── README.md                → Main project documentation
-
+```
