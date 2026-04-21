@@ -1,18 +1,16 @@
-import { CommonModule } from '@angular/common';
-import { Component, inject, OnInit, signal } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [],
   templateUrl: './login.html',
   styleUrl: './login.css',
 })
-export class LoginComponent implements OnInit{
+export class LoginComponent {
 
-  username = 'Admin';
+  username = signal<string>('Admin');
   password = signal<string>('dummy');
   errorMessage = 'Invalid Credentials'
   invalidLogin = false
@@ -24,15 +22,10 @@ export class LoginComponent implements OnInit{
   constructor( private router: Router) { /* empty * / }
   */
 
-  ngOnInit(): void {
-    // initialization logic here
-    throw new Error('Method not implemented.');
-  }
-
   handleLogin() {
     // console.log(this.username + "-" + this.password());
-    if(this.username==="Admin" && this.password() === 'dummy') {
-      this.router.navigate(['welcome', this.username])
+    if(this.username()==="Admin" && this.password() === 'dummy') {
+      this.router.navigate(['welcome', this.username()])
       this.invalidLogin = false
     } else {
       this.invalidLogin = true

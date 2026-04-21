@@ -1,11 +1,10 @@
-import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-welcome',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [RouterLink],
   templateUrl: './welcome.html',
   styleUrl: './welcome.css',
 })
@@ -27,12 +26,4 @@ export class WelcomeComponent implements OnInit{
     console.log(this.name)
   }
 
-}
-
-export class Class1 {
-
-}
-
-export class Class2 {
-  
 }

@@ -1,0 +1,18 @@
+<table border="1">
+  <caption> My Todos Reloaded</caption>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (todo of todoService.todos(); track todo.id) {
+    <tr>
+      <td>{{ todo.id }}</td>
+      <td>{{ todo.description }}</td>
+    </tr>
+    }
+  </tbody> 
+</table>
+

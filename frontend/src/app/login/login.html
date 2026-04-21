@@ -4,11 +4,14 @@
 }
 
 <div>
-    User Name : <input type="text" name="username" [(ngModel)]="username">
     <!-- User Name : <input type="text" name="username" [value]="username"> -->
-    Password  : <input type="password" name="password" [ngModel]="password()" (ngModelChange)="password.set($event)">
-
     <!-- User Name: {{username}} -->
+
+    <!-- User Name : <input type="text" name="username" [(ngModel)]="username"> -->
+    <!-- Password  : <input type="password" name="password" [ngModel]="password()" (ngModelChange)="password.set($event)"> -->
+
+    User Name : <input type="text" [value]="username()" (input)="username.set($event.target.value)">
+    Password  : <input type="password" [value]="password()" (input)="password.set($event.target.value)">
 
     <button (click)="handleLogin()">Login</button>
 </div>

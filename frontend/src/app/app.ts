@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 //import { Welcome } from "./welcome/welcome";
 //import { Login } from "./login/login";
@@ -9,7 +8,7 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.html',
 //  template: '<h1>{{message}}</h1>',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],   // , Welcome, Login
+  imports: [RouterOutlet],   // , Welcome, Login
   styleUrl: './app.css'
 })
 export class App {
