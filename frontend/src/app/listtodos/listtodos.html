@@ -1,7 +1,5 @@
 <table border="1">
-  <caption>
-    My Todo's
-  </caption>
+  <caption> My Todo's</caption>
   <thead>
     <tr>
       <th>id</th>
@@ -9,9 +7,11 @@
     </tr>
   </thead>
   <tbody>
+    @for (todo of todoService.todos(); track todo.id) {
     <tr>
-      <td>{{todo.id}}</td>
-      <td>{{todo.description}}</td>
+      <td>{{ todo.id }}</td>
+      <td>{{ todo.description }}</td>
     </tr>
-  </tbody>
+    }
+  </tbody> 
 </table>
