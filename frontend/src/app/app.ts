@@ -2,13 +2,15 @@ import { Component, signal } from '@angular/core';
 //import { Welcome } from "./welcome/welcome";
 //import { Login } from "./login/login";
 import { RouterOutlet } from '@angular/router';
+import { MenuComponent } from "./menu/menu";
+import { FooterComponent } from "./footer/footer";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
 //  template: '<h1>{{message}}</h1>',
   standalone: true,
-  imports: [RouterOutlet],   // , Welcome, Login
+  imports: [RouterOutlet, MenuComponent, FooterComponent],   // , Welcome, Login
   styleUrl: './app.css'
 })
 export class App {
