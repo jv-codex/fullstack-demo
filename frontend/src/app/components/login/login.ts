@@ -1,6 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
-import { HardcodedAuthentication } from '../services/hardcoded-authentication';
+import { HardcodedAuthentication } from '../../services/hardcoded-authentication';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +12,7 @@ import { HardcodedAuthentication } from '../services/hardcoded-authentication';
 export class LoginComponent {
 
   username = signal<string>('Admin');
-  password = signal<string>('dummy');
+  password = signal<string>('');
   errorMessage = 'Invalid Credentials'
   invalidLogin = false
   private router = inject(Router);
