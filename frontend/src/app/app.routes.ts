@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
 
-import { ErrorComponent } from './error/error';
-import { LoginComponent } from './login/login';
-import { WelcomeComponent } from './welcome/welcome';
-import { ListTodosComponent } from './listtodos/listtodos';
-import { ListtodosReloadedComponent } from './listtodos-reloaded/listtodos-reloaded';
-import { LogoutComponent } from './logout/logout';
+import { ErrorComponent } from './components/error/error';
+import { LoginComponent } from './components/login/login';
+import { WelcomeComponent } from './components/welcome/welcome';
+import { ListTodosComponent } from './components/listtodos/listtodos';
+import { ListtodosReloadedComponent } from './components/listtodos-reloaded/listtodos-reloaded';
+import { LogoutComponent } from './components/logout/logout';
 import { RouteGuard } from './services/route-guard';
 
 export const routes: Routes = [

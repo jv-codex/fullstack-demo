@@ -1,6 +1,6 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from "@angular/router";
-import { HardcodedAuthentication } from '../services/hardcoded-authentication';
+import { HardcodedAuthentication } from '../../services/hardcoded-authentication';
 
 @Component({
   selector: 'app-menu',
@@ -10,11 +10,6 @@ import { HardcodedAuthentication } from '../services/hardcoded-authentication';
   styleUrl: './menu.css',
 })
 export class MenuComponent { //implements OnInit {
-  //isUserLoggedIn = false;
   public hardcodedAuthentication = inject(HardcodedAuthentication);
   
-  // ngOnInit(): void {
-  //   this.isUserLoggedIn =  this.hardcodedAuthentication.isUserLoggedIn()
-  // }
-
 }
