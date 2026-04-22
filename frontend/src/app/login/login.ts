@@ -1,5 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
+import { HardcodedAuthentication } from '../services/hardcoded-authentication';
 
 @Component({
   selector: 'app-login',
@@ -15,16 +16,11 @@ export class LoginComponent {
   errorMessage = 'Invalid Credentials'
   invalidLogin = false
   private router = inject(Router);
-
-  /*
-  use inject function instead constructor parameter injection
-  eslint-disable-next-line @angular-eslint/prefer-inject
-  constructor( private router: Router) { /* empty * / }
-  */
-
+  private hardcodedAuthentication = inject(HardcodedAuthentication);
+   
   handleLogin() {
-    // console.log(this.username + "-" + this.password());
-    if(this.username()==="Admin" && this.password() === 'dummy') {
+    if(this.hardcodedAuthentication.authenticate(this.username(), this.password())) {
+      //Redirect to Welcome Page
       this.router.navigate(['welcome', this.username()])
       this.invalidLogin = false
     } else {
